@@ -85,7 +85,7 @@ class ProfilePage extends StatelessWidget {
                       onTap: () {},
                       child: Center(
                         child: Text(
-                          'Log out',
+                          'Log outrr',
                           style: TextStyle(
                               color: Colors.white,
                               fontSize: screenWidth!*0.045,
