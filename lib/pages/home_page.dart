@@ -14,23 +14,26 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar:AppBar(
         title:FlutterLogo(
-          size: 25.0,
+          size: screenWidth!*0.08,
         ),
         elevation: 0.0,
         backgroundColor: Colors.white,
         centerTitle: true,
         leading: IconButton(
           onPressed:(){},
-          icon:const Icon(
+          icon:Icon(
             Icons.arrow_back,
+            size: screenWidth!*0.08,
           ),
           color: Colors.grey,
         ),
         actions: [
           IconButton(
             onPressed:(){},
-            icon:const Icon(
-              Icons.menu,),
+            icon:Icon(
+              Icons.menu,
+              size: screenWidth!*0.08,
+            ),
             color: Colors.grey,
           ),
         ],
@@ -75,7 +78,7 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.grey,
                               fontFamily: "Quicksand",
-                              fontSize: screenHeight!*0.022,
+                              fontSize: screenWidth!*0.04,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -88,7 +91,7 @@ class HomePage extends StatelessWidget {
                             style: TextStyle(
                               color: Colors.black,
                               fontFamily: "Quicksand",
-                              fontSize: screenHeight!*0.05,
+                              fontSize: screenWidth!*0.1,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -97,7 +100,7 @@ class HomePage extends StatelessWidget {
                     ),
                     Container(
                       width: screenWidth!*0.35,
-                      height: screenHeight!*0.06,
+                      height: screenWidth!*0.12,
                       decoration: BoxDecoration(
                         color: Colors.greenAccent[100]?.withOpacity(0.5),
                         borderRadius: BorderRadius.circular(10.0),
@@ -108,7 +111,7 @@ class HomePage extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.green,
                             fontFamily: "Quicksand",
-                            fontSize: screenHeight!*0.028,
+                            fontSize: screenWidth!*0.05,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -132,7 +135,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.grey,
                     fontFamily: "Quicksand",
-                    fontSize: screenHeight!*0.021,
+                    fontSize: screenWidth!*0.032,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -141,7 +144,7 @@ class HomePage extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.green,
                     fontFamily: "Quicksand",
-                    fontSize: screenHeight!*0.021,
+                    fontSize: screenWidth!*0.032,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

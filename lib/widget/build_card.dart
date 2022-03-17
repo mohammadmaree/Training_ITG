@@ -31,15 +31,15 @@ class BuildCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(200),
                     child:Image.network(
                           'https://awsimages.detik.net.id/community/media/visual/2020/06/22/kim-soo-hyun-9.png?w=700&q=80',
-                      width:screenWidth * 0.35,
-                      height:screenHeight * 0.35,
+                      width:screenWidth * 0.4,
+                      height:screenWidth * 0.4,
                       fit: BoxFit.fitWidth,
                       ),
                     ),
                   Container(
-                    margin: const EdgeInsets.only(left: 40.0),
-                    height: screenHeight*0.08,
-                    width: screenHeight*0.08,
+                    margin: EdgeInsets.only(left: screenWidth*0.3),
+                    height: screenWidth*0.08,
+                    width: screenWidth*0.08,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30.0),
                         color: status == 'Away' ? Colors.amber : Colors.green,
@@ -58,7 +58,7 @@ class BuildCard extends StatelessWidget {
               style: TextStyle(
                 fontFamily: 'Quicksand',
                 fontWeight: FontWeight.bold,
-                fontSize: screenHeight*0.1,
+                fontSize: screenWidth*0.1,
               ),
             ),
             const SizedBox(height: 5.0),
@@ -67,14 +67,13 @@ class BuildCard extends StatelessWidget {
               style: TextStyle(
                   fontFamily: 'Quicksand',
                   fontWeight: FontWeight.bold,
-                  fontSize: screenHeight*0.08,
+                  fontSize: screenWidth*0.08,
                   color: Colors.grey
               ),
             ),
             const SizedBox(height: 15.0),
             Expanded(
                 child: Container(
-                    width: screenHeight,
                     decoration: BoxDecoration(
                       color: status == 'Away' ? Colors.grey: Colors.green,
                       borderRadius: const BorderRadius.only
@@ -88,7 +87,7 @@ class BuildCard extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: 'Quicksand',
-                          fontSize: screenHeight*0.09
+                          fontSize: screenWidth*0.1
                         ),
                       ),
                     )
