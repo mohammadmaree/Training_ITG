@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 class buildListItem extends StatelessWidget {
   final String picture;
+  final double screenWidth;
+  final double screenHeight;
+
   buildListItem({
-    required this.picture
+    required this.picture,
+    required this.screenWidth,
+    required this.screenHeight,
   });
 
   @override
@@ -13,33 +18,33 @@ class buildListItem extends StatelessWidget {
         Row(
           children: <Widget>[
             Container(
-              height: 100.0,
-              width: 100.0,
+              height: screenWidth*0.28,
+              width: screenWidth*0.28,
               decoration: BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage(picture),
                       fit: BoxFit.cover
                   ),
-                  borderRadius: BorderRadius.only(topRight: Radius.circular(10.0), bottomRight: Radius.circular(10.0))
+                  borderRadius: BorderRadius.only(topRight: Radius.circular(screenWidth*0.05), bottomRight: Radius.circular(screenWidth*0.05))
               ),
             ),
-            SizedBox(width: 10.0),
-            Container(
-              height: 100.0,
+            const SizedBox(width: 10.0),
+            SizedBox(
+              height:screenWidth*0.28,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
+                children:[
                   Text('Maple Mustard Tempeh',
                     style: TextStyle(
-                        fontSize: 15.0,
+                        fontSize: screenWidth*0.05,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold
                     ),
                   ),
-                  SizedBox(height: 5.0),
+                  const SizedBox(height: 5.0),
                   Text('Marinated kale, onion, tomato and roasted',
                     style: TextStyle(
-                        fontSize: 11.0,
+                        fontSize: screenWidth*0.03,
                         fontFamily: 'Montserrat',
                         // fontWeight: FontWeight.bold,
                         color: Colors.grey
@@ -47,15 +52,15 @@ class buildListItem extends StatelessWidget {
                   ),
                   Text('garlic aioli on grilled spelt bread',
                     style: TextStyle(
-                        fontSize: 11.0,
+                        fontSize: screenWidth*0.03,
                         fontFamily: 'Montserrat',
                         // fontWeight: FontWeight.bold,
                         color: Colors.grey
                     ),),
-                  SizedBox(height: 10.0),
+                  const SizedBox(height: 10.0),
                   Text('\$11.25',
                     style: TextStyle(
-                        fontSize: 20.0,
+                        fontSize: screenWidth*0.075,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold,
                         color: Colors.grey

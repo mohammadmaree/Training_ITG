@@ -6,6 +6,9 @@ class HomePage extends StatelessWidget {
   double? screenWidth;
   double? screenHeight;
 
+  List<String> status =['Away','Available','Available','Away','Away','Available'];
+  List<int>cardIndex=[1,2,3,4,5,6];
+
   @override
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;
@@ -40,6 +43,7 @@ class HomePage extends StatelessWidget {
       ),
       body: ListView(
         shrinkWrap: true,
+        physics: BouncingScrollPhysics(),
         children: [
           Stack(
             children: [
@@ -153,24 +157,37 @@ class HomePage extends StatelessWidget {
           ),
           const SizedBox(height: 10.0),
           GridView.count(
+            physics: BouncingScrollPhysics(),
             crossAxisCount: 2,
             primary: false,
             crossAxisSpacing: 2.0,
             mainAxisSpacing: 4.0,
             shrinkWrap: true,
             children: <Widget>[
-              BuildCardHomePage(name: 'Tom',status:'Away',cardIndex:1,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCardHomePage(name: 'Tom',status:'Available',cardIndex: 2,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCardHomePage(name: 'Tom',status:'Available',cardIndex: 3,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCardHomePage(name: 'Tom',status:'Away',cardIndex:4,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCardHomePage(name: 'Tom',status:'Away',cardIndex:5,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCardHomePage(name: 'Tom',status:'Available',cardIndex: 6,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              // ListView.builder(
+              //   shrinkWrap: true,
+              //   physics: BouncingScrollPhysics(),
+              //     itemBuilder: (context, index) => BuildCardHomePage(
+              //       name: 'Tom',
+              //       status:status[index],
+              //       cardIndex:cardIndex[index],
+              //       screenWidth:screenWidth!*0.4,
+              //       screenHeight:screenHeight!*0.25,
+              //     ),
+              //   itemCount:status.length,
+              // ),
+              BuildCardHomePage(name: 'Tom',status:status[0],cardIndex:1,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:status[1],cardIndex: 2,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:status[2],cardIndex: 3,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:status[3],cardIndex:4,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:status[4],cardIndex:5,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:status[5],cardIndex: 6,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
             ],
 
           )
         ],
       ),
     );
-  }
 
+  }
 }

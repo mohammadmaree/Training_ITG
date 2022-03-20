@@ -6,10 +6,13 @@ class SelectedPhoto extends StatelessWidget {
 
   final int numberOfDots;
   final int photoIndex;
+  final double screenWidth;
+
 
   SelectedPhoto({
     required this.numberOfDots,
     required this.photoIndex,
+    required this.screenWidth,
   });
 
   List<Widget> listDots() {
@@ -17,7 +20,7 @@ class SelectedPhoto extends StatelessWidget {
 
     for(int i = 0; i< numberOfDots; ++i) {
       dots.add(
-          i == photoIndex ? BuildDotsActivePhoto(): BuildDotsInactivePhoto()
+          i == photoIndex ? BuildDotsActivePhoto(screenWidth:screenWidth,): BuildDotsInactivePhoto(screenWidth:screenWidth*0.85)
       );
     }
 
