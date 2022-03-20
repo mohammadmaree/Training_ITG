@@ -1,5 +1,5 @@
 
-import 'package:first_projrct/widget/build_card.dart';
+import 'package:first_projrct/widget/build_card_home_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -159,12 +159,12 @@ class HomePage extends StatelessWidget {
             mainAxisSpacing: 4.0,
             shrinkWrap: true,
             children: <Widget>[
-              BuildCard(name: 'Tom',status:'Away',cardIndex:1,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCard(name: 'Tom',status:'Available',cardIndex: 2,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCard(name: 'Tom',status:'Available',cardIndex: 3,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCard(name: 'Tom',status:'Away',cardIndex:4,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCard(name: 'Tom',status:'Away',cardIndex:5,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
-              BuildCard(name: 'Tom',status:'Available',cardIndex: 6,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:'Away',cardIndex:1,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:'Available',cardIndex: 2,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:'Available',cardIndex: 3,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:'Away',cardIndex:4,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:'Away',cardIndex:5,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
+              BuildCardHomePage(name: 'Tom',status:'Available',cardIndex: 6,screenWidth:screenWidth!*0.4,screenHeight:screenHeight!*0.25,),
             ],
 
           )
