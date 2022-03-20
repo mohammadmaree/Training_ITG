@@ -4,6 +4,7 @@ import 'package:first_projrct/pages/home_page.dart';
 import 'package:first_projrct/pages/login_page.dart';
 import 'package:first_projrct/pages/profile_page.dart';
 import 'package:first_projrct/pages/signup_page.dart';
+import 'package:first_projrct/pages/travelogram_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -31,6 +32,6 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return HomePage();
+    return TravelogramPage();
   }
 }
