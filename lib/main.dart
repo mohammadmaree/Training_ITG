@@ -3,8 +3,10 @@ import 'package:first_projrct/pages/carousel_page.dart';
 import 'package:first_projrct/pages/home_page.dart';
 import 'package:first_projrct/pages/login_page.dart';
 import 'package:first_projrct/pages/profile_page.dart';
+import 'package:first_projrct/pages/restaurant_home.dart';
 import 'package:first_projrct/pages/signup_page.dart';
 import 'package:first_projrct/pages/travelogram_page.dart';
+import 'package:first_projrct/pages/travelogram_profile_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -24,6 +26,8 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginPage.routeName : (ctx) => LoginPage(),
         SignupPage.routeName : (ctx) => SignupPage(),
+        TravelogramProfilePage.routeName:(ctx)=>TravelogramProfilePage(),
+        TravelogramPage.routeName:(ctx)=>TravelogramPage(),
       },
     );
   }
@@ -32,6 +36,6 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return TravelogramPage();
+    return RestaurantHome();
   }
 }

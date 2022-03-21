@@ -1,4 +1,4 @@
-import 'package:first_projrct/widget/default_text_form_field.dart';
+import 'package:first_projrct/widget/build_default_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class SignupPage extends StatefulWidget {
@@ -87,17 +87,17 @@ class _SignupPageState extends State<SignupPage>with SingleTickerProviderStateMi
                         padding: const EdgeInsets.only(top: 35.0, left: 20.0, right: 20.0),
                         child: Column(
                           children: <Widget>[
-                            DefaultTextFormField(
+                            BuildDefaultTextFormField(
                               text: "EMAIL",
                               screenWidth:screenWidth!,
                             ),
                             SizedBox(height: screenHeight!*0.03),
-                            DefaultTextFormField(
+                            BuildDefaultTextFormField(
                               text: "PASSWORD ",
                               screenWidth:screenWidth!,
                             ),
                             SizedBox(height: screenHeight!*0.03),
-                            DefaultTextFormField(
+                            BuildDefaultTextFormField(
                               text: "NICK NAME ",
                               screenWidth:screenWidth!,
                             ),

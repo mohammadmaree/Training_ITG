@@ -1,5 +1,5 @@
 import 'package:first_projrct/pages/signup_page.dart';
-import 'package:first_projrct/widget/default_text_form_field.dart';
+import 'package:first_projrct/widget/build_default_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -92,12 +92,12 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                       padding: const EdgeInsets.only(top: 30.0, left: 20.0, right: 20.0),
                       child: Column(
                         children: <Widget>[
-                          DefaultTextFormField(
+                          BuildDefaultTextFormField(
                             text: "EMAIL",
                             screenWidth:screenWidth!,
                           ),
                           SizedBox(height: screenHeight!*0.01),
-                          DefaultTextFormField(
+                          BuildDefaultTextFormField(
                             text:"PASSWORD",
                             screenWidth:screenWidth!,
                           ),

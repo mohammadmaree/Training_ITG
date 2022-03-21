@@ -1,10 +1,10 @@
 
 import 'package:flutter/material.dart';
 
-class DefaultTextFormField extends StatelessWidget {
+class BuildDefaultTextFormField extends StatelessWidget {
   final String text;
   final double screenWidth;
-  DefaultTextFormField({
+  BuildDefaultTextFormField({
     required this.text,
     required this.screenWidth,
   });
