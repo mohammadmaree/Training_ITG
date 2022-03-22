@@ -157,7 +157,7 @@ class _FurnitureHomeState extends State<FurnitureHome>with SingleTickerProviderS
                 physics: BouncingScrollPhysics(),
                 itemCount:itemImages.length,
                 itemBuilder: (context, index) =>BuildFurnitureItemCard(
-                screenHeight:screenHeight!*0.3,
+                screenHeight:screenHeight!*0.42,
                 screenWidth:screenWidth!*0.95,
                 title: itemTitle[index],
                 image: itemImages[index],
