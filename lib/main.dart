@@ -1,5 +1,7 @@
+import 'package:first_projrct/Furniture/pages/furniture%20_home.dart';
 import 'package:first_projrct/cards/cards_page.dart';
 import 'package:first_projrct/carousel/pages/carousel_page.dart';
+import 'package:first_projrct/dessert_restaurant/pages/dessert_restaurant_home.dart';
 import 'package:first_projrct/gcoaching/pages/home_page.dart';
 import 'package:first_projrct/authentication/pages/login_page.dart';
 import 'package:first_projrct/authentication/pages/profile_page.dart';
@@ -38,6 +40,6 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return TravelogramHome();
+    return FurnitureHome();
   }
 }
