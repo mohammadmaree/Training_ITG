@@ -1,4 +1,5 @@
-import 'package:first_projrct/widget/build_travel_image_profile.dart';
+import 'package:first_projrct/travelogram/widget/build_travel_image_profile.dart';
+import 'package:first_projrct/travelogram/widget/build_travel_post_detail.dart';
 import 'package:flutter/material.dart';
 
 import '../widget/build_travel_post_detail.dart';

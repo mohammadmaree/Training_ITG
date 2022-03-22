@@ -1,6 +1,8 @@
-import 'package:first_projrct/widget/build_restaurant_food_card.dart';
-import 'package:first_projrct/widget/build_restaurant_image.dart';
+import 'package:first_projrct/restaurant/widget/build_restaurant_food_card.dart';
+import 'package:first_projrct/restaurant/widget/build_restaurant_image.dart';
+import 'package:first_projrct/restaurant/widget/build_restaurant_search.dart';
 import 'package:flutter/material.dart';
+
 
 class RestaurantHome extends StatelessWidget {
   double? screenWidth;
@@ -28,27 +30,10 @@ class RestaurantHome extends StatelessWidget {
               ),
               Column(
                 children: [
-                  Container(
-                    padding: EdgeInsets.fromLTRB(screenWidth!*0.05, screenHeight!*0.04, screenWidth!*0.05, screenHeight!*0.02),
-                    child: Material(
-                      elevation: 10.0,
-                      borderRadius: BorderRadius.circular(screenWidth!*0.075),
-                      child: TextFormField(
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            prefixIcon: Icon(
-                                Icons.search,
-                                color: Colors.black,
-                              size: screenWidth!*0.07,
-                            ),
-                            contentPadding: EdgeInsets.only(left: 50.0, top: screenHeight!*0.02),
-                            hintText: 'Search for recipes and channels',
-                            hintStyle: TextStyle(
-                                color: Colors.grey,
-                              fontSize:screenWidth!*0.045,
-                            )),
-                      ),
-                    ),
+                  BuildRestaurantSearch(
+                    screenWidth:screenWidth!,
+                    screenHeight:screenHeight!,
+                    hintText: 'Search for recipes and channels',
                   ),
                   SizedBox(height: screenHeight!*0.04),
                   Padding(

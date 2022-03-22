@@ -1,7 +1,7 @@
-import 'package:first_projrct/widget/build_information_carousel.dart';
-import 'package:first_projrct/widget/build_list_item.dart';
-import 'package:first_projrct/widget/build_slider.dart';
-import 'package:first_projrct/widget/selected_photo.dart';
+import 'package:first_projrct/carousel/widget/build_information_carousel.dart';
+import 'package:first_projrct/carousel/widget/build_list_item.dart';
+import 'package:first_projrct/carousel/widget/build_slider.dart';
+import 'package:first_projrct/gcoaching/widget/selected_photo.dart';
 import 'package:flutter/material.dart';
 
 class CarouselPage extends StatefulWidget {

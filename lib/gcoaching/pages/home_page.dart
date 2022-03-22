@@ -1,5 +1,5 @@
 
-import 'package:first_projrct/widget/build_card_home_page.dart';
+import 'package:first_projrct/gcoaching/widget/build_card_home_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {

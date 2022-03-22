@@ -1,5 +1,5 @@
-import 'package:first_projrct/widget/build_dots_active_photo.dart';
-import 'package:first_projrct/widget/build_dots_inactive_photo.dart';
+import 'package:first_projrct/gcoaching/widget/build_dots_active_photo.dart';
+import 'package:first_projrct/gcoaching/widget/build_dots_inactive_photo.dart';
 import 'package:flutter/material.dart';
 
 class SelectedPhoto extends StatelessWidget {

@@ -1,5 +1,6 @@
-import 'package:first_projrct/pages/signup_page.dart';
-import 'package:first_projrct/widget/build_default_text_form_field.dart';
+import 'package:first_projrct/authentication/pages/profile_page.dart';
+import 'package:first_projrct/authentication/pages/signup_page.dart';
+import 'package:first_projrct/authentication/widget/build_default_text_form_field.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -126,7 +127,9 @@ class _LoginPageState extends State<LoginPage> with SingleTickerProviderStateMix
                               color: Colors.green,
                               elevation: 7.0,
                               child: GestureDetector(
-                                onTap: () {},
+                                onTap: () {
+                                  Navigator.of(context).pushNamed(ProfilePage.routeName);
+                                },
                                 child: Center(
                                   child: Text(
                                     'LOGIN',

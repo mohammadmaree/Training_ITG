@@ -1,17 +1,17 @@
-import 'package:first_projrct/pages/travelogram_profile_page.dart';
-import 'package:first_projrct/widget/build_travel_image_post.dart';
-import 'package:first_projrct/widget/build_travel_post_detail.dart';
+import 'package:first_projrct/travelogram/pages/travelogram_profile_page.dart';
+import 'package:first_projrct/travelogram/widget/build_travel_image_post.dart';
+import 'package:first_projrct/travelogram/widget/build_travel_post_detail.dart';
 import 'package:flutter/material.dart';
 
-class TravelogramPage extends StatefulWidget {
+class TravelogramHome extends StatefulWidget {
   static String routeName = 'ravelogramePageRouteName';
 
 
   @override
-  State<TravelogramPage> createState() => _TravelogramPageState();
+  State<TravelogramHome> createState() => _TravelogramHomeState();
 }
 
-class _TravelogramPageState extends State<TravelogramPage>
+class _TravelogramHomeState extends State<TravelogramHome>
     with SingleTickerProviderStateMixin
 {
   double? screenWidth;

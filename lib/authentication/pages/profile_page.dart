@@ -1,7 +1,9 @@
-import 'package:first_projrct/widget/get_clipper.dart';
+import 'package:first_projrct/authentication/pages/login_page.dart';
+import 'package:first_projrct/gcoaching/widget/get_clipper.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
+  static String routeName = 'ProfilePageRouteName';
   double? screenWidth;
   double? screenHeight;
   @override
@@ -82,7 +84,9 @@ class ProfilePage extends StatelessWidget {
                     color: Colors.red,
                     elevation: 7.0,
                     child: GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pushNamed(LoginPage.routeName);
+                      },
                       child: Center(
                         child: Text(
                           'Log out',
