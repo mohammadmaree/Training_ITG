@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class BuildFurnitureBackgroundHome extends StatelessWidget {
+class BuildFurnitureBackground extends StatelessWidget {
   final double screenHeight;
   final double screenWidth;
   final int color;
-  BuildFurnitureBackgroundHome({
+  BuildFurnitureBackground({
     required this.screenHeight,
     required this.screenWidth,
     required this.color,

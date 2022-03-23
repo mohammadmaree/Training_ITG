@@ -1,4 +1,7 @@
+import 'package:first_projrct/Furniture/furniture_main.dart';
 import 'package:first_projrct/Furniture/pages/furniture%20_home.dart';
+import 'package:first_projrct/Furniture/pages/product_description_page.dart';
+import 'package:first_projrct/Furniture/pages/stats_page.dart';
 import 'package:first_projrct/cards/cards_page.dart';
 import 'package:first_projrct/carousel/pages/carousel_page.dart';
 import 'package:first_projrct/dessert_restaurant/pages/dessert_restaurant_home.dart';
@@ -31,7 +34,8 @@ class MyApp extends StatelessWidget {
         ProfilePage.routeName :(ctx) =>ProfilePage(),
         TravelogramProfilePage.routeName:(ctx)=>TravelogramProfilePage(),
         TravelogramHome.routeName:(ctx)=>TravelogramHome(),
-
+        FurnitureHome.routeName:(ctx)=>FurnitureHome(),
+        StatsPage.routeName:(ctx)=>StatsPage(),
       },
     );
   }
@@ -40,6 +44,6 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return FurnitureHome();
+    return ProductDescriptionPage();
   }
 }

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class BuildFurnitureCategories extends StatelessWidget {
+class BuildFurnitureCategoriesHome extends StatelessWidget {
   final double screenHeight;
   final double screenWidth;
   final List<String> images;
   final List<String> names;
-  BuildFurnitureCategories({
+  BuildFurnitureCategoriesHome({
     required this.screenHeight,
     required this.screenWidth,
     required this.images,
