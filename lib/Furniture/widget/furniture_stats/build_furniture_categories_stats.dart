@@ -1,4 +1,4 @@
-import 'package:first_projrct/Furniture/widget/build_furniture_category_stats.dart';
+import 'package:first_projrct/Furniture/widget/furniture_stats/build_furniture_category_stats.dart';
 import 'package:flutter/material.dart';
 
 class BuildFurnitureCategoriesStats extends StatelessWidget {

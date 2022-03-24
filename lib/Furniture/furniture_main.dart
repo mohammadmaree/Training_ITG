@@ -1,7 +1,9 @@
 import 'dart:html';
 
-import 'package:first_projrct/Furniture/pages/furniture%20_home.dart';
-import 'package:first_projrct/Furniture/pages/stats_page.dart';
+import 'package:first_projrct/Furniture/pages/furniture%20_home_page.dart';
+import 'package:first_projrct/Furniture/pages/furniture%20_profile_page.dart';
+import 'package:first_projrct/Furniture/pages/furniture_shopping_cart_page.dart';
+import 'package:first_projrct/Furniture/pages/furniture_stats_page.dart';
 import 'package:flutter/material.dart';
 
 class FurnitureMain extends StatefulWidget {
@@ -22,10 +24,10 @@ class _FurnitureMainState extends State<FurnitureMain>with SingleTickerProviderS
   ];
 
   List<Widget> bottomScreens = [
-    FurnitureHome(),
-    StatsPage(),
-    FurnitureHome(),
-    StatsPage(),
+    FurnitureHomePage(),
+    FurnitureStatsPage(),
+    FurnitureShoppingCartPage(),
+    FurnitureProfilePage(),
   ];
   void changeBottomIndex(int index) {
     setState(() {
@@ -35,28 +37,7 @@ class _FurnitureMainState extends State<FurnitureMain>with SingleTickerProviderS
       active[3]= false;
       currentIndex = index;
       active[index]= true;
-      // if(index==0)
-      //   {
-      //     active0 = true;
-      //     active1 = false;
-      //     active2 = false;
-      //     active3 = false;
-      //   }else if(index==1){
-      //   active0 = false;
-      //   active1 = true;
-      //   active2 = false;
-      //   active3 = false;
-      // }else if(index==2){
-      //   active0 = false;
-      //   active1 = false;
-      //   active2 = true;
-      //   active3 = false;
-      // }else if(index==3){
-      //   active0 = false;
-      //   active1 = false;
-      //   active2 = false;
-      //   active3 = true;
-      // }
+
     });
   }
 

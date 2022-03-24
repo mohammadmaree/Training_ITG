@@ -1,5 +1,5 @@
-import 'package:first_projrct/Furniture/widget/build_furniture_dots_active_photo.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_dots_inactive_photo.dart';
+import 'package:first_projrct/Furniture/widget/furniture_product_description/build_furniture_dots_active_photo.dart';
+import 'package:first_projrct/Furniture/widget/furniture_product_description/build_furniture_dots_inactive_photo.dart';
 import 'package:flutter/material.dart';
 
 class BuildFurnitureSelectedPhoto extends StatelessWidget {

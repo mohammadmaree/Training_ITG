@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class BuildFurnitureCardDetails extends StatelessWidget {
+class BuildFurnitureStatsCardDetails extends StatelessWidget {
   final String title;
   final String image;
   final String valueCount;
   final double screenHeight;
   final double screenWidth;
-  BuildFurnitureCardDetails({
+  BuildFurnitureStatsCardDetails({
     required this.title,
     required this.image,
     required this.valueCount,

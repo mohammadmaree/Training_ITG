@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class BuildFurnitureAppBar extends StatelessWidget {
+class BuildFurnitureStatsAppBar extends StatelessWidget {
   final double screenHeight;
   final double screenWidth;
   final String image;
   final IconData icon;
   final String title;
   final String nAccount;
-  BuildFurnitureAppBar({
+  BuildFurnitureStatsAppBar({
     required this.screenHeight,
     required this.screenWidth,
     required this.nAccount,

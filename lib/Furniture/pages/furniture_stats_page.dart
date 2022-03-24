@@ -1,12 +1,12 @@
-import 'package:first_projrct/Furniture/widget/build_furniture_app_bar.dart';
+import 'package:first_projrct/Furniture/widget/furniture_stats/build_furniture_stats_app_bar.dart';
 import 'package:first_projrct/Furniture/widget/build_furniture_background.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_card_details.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_categories_home.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_categories_stats.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_list_item.dart';
+import 'package:first_projrct/Furniture/widget/furniture_stats/build_furniture_stats_card_details.dart';
+import 'package:first_projrct/Furniture/widget/furniture_home/build_furniture_categories_home.dart';
+import 'package:first_projrct/Furniture/widget/furniture_stats/build_furniture_categories_stats.dart';
+import 'package:first_projrct/Furniture/widget/furniture_stats/build_furniture_stats_list_item.dart';
 import 'package:flutter/material.dart';
 
-class StatsPage extends StatelessWidget{
+class FurnitureStatsPage extends StatelessWidget{
 
   static String routeName = 'StatsPageRouteName';
   double? screenWidth;
@@ -40,7 +40,7 @@ class StatsPage extends StatelessWidget{
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: screenHeight!*0.03),
-                    BuildFurnitureAppBar(
+                    BuildFurnitureStatsAppBar(
                       screenWidth:screenWidth!,
                       screenHeight:screenHeight!,
                       title:'Pino',
@@ -63,28 +63,28 @@ class StatsPage extends StatelessWidget{
                         mainAxisSpacing: screenWidth!*0.04,
                         shrinkWrap: true,
                         children: [
-                          BuildFurnitureCardDetails(
+                          BuildFurnitureStatsCardDetails(
                             title:'Pending payment',
                             image:'assets/images/card.png',
                             valueCount:'5',
                             screenHeight:screenHeight!,
                             screenWidth:screenWidth!,
                           ),
-                          BuildFurnitureCardDetails(
+                          BuildFurnitureStatsCardDetails(
                             title: 'To be shipped',
                             image:'assets/images/box.png',
                             valueCount: '2',
                             screenHeight:screenHeight!,
                             screenWidth:screenWidth!,
                           ),
-                          BuildFurnitureCardDetails(
+                          BuildFurnitureStatsCardDetails(
                             title:'To be received',
                             image: 'assets/images/trucks.png',
                             valueCount: '8',
                             screenHeight:screenHeight!,
                             screenWidth:screenWidth!,
                           ),
-                          BuildFurnitureCardDetails(
+                          BuildFurnitureStatsCardDetails(
                             title:'Return / Replace',
                             image:'assets/images/returnbox.png',
                             valueCount:'0',
@@ -102,7 +102,7 @@ class StatsPage extends StatelessWidget{
             ListView.builder(
               shrinkWrap: true,
               itemBuilder: (context, index) =>
-                  BuildFurnitureListItem(
+                  BuildFurnitureStatsListItem(
                     screenHeight:screenHeight!,
                     screenWidth:screenWidth!,
                     title:data[index][0],

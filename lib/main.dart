@@ -1,7 +1,8 @@
 import 'package:first_projrct/Furniture/furniture_main.dart';
-import 'package:first_projrct/Furniture/pages/furniture%20_home.dart';
-import 'package:first_projrct/Furniture/pages/product_description_page.dart';
-import 'package:first_projrct/Furniture/pages/stats_page.dart';
+import 'package:first_projrct/Furniture/pages/furniture%20_home_page.dart';
+import 'package:first_projrct/Furniture/pages/furniture_product_description_page.dart';
+import 'package:first_projrct/Furniture/pages/furniture_shopping_cart_page.dart';
+import 'package:first_projrct/Furniture/pages/furniture_stats_page.dart';
 import 'package:first_projrct/cards/cards_page.dart';
 import 'package:first_projrct/carousel/pages/carousel_page.dart';
 import 'package:first_projrct/dessert_restaurant/pages/dessert_restaurant_home.dart';
@@ -27,6 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
+
       home: const MyHomePage(),
       routes: {
         LoginPage.routeName : (ctx) => LoginPage(),
@@ -34,8 +36,9 @@ class MyApp extends StatelessWidget {
         ProfilePage.routeName :(ctx) =>ProfilePage(),
         TravelogramProfilePage.routeName:(ctx)=>TravelogramProfilePage(),
         TravelogramHome.routeName:(ctx)=>TravelogramHome(),
-        FurnitureHome.routeName:(ctx)=>FurnitureHome(),
-        StatsPage.routeName:(ctx)=>StatsPage(),
+        FurnitureHomePage.routeName:(ctx)=>FurnitureHomePage(),
+        FurnitureStatsPage.routeName:(ctx)=>FurnitureStatsPage(),
+        FurnitureProductDescriptionPage.routeName:(ctx)=>FurnitureProductDescriptionPage(),
       },
     );
   }

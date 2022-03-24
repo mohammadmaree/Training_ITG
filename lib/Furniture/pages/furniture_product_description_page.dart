@@ -1,15 +1,20 @@
-import 'package:first_projrct/Furniture/widget/build_furniture_product_description_colors.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_product_description_details.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_selected_photo.dart';
+import 'package:first_projrct/Furniture/widget/furniture_product_description/build_furniture_product_description_app_bar.dart';
+import 'package:first_projrct/Furniture/widget/furniture_product_description/build_furniture_product_description_colors.dart';
+import 'package:first_projrct/Furniture/widget/furniture_product_description/build_furniture_product_description_details.dart';
+import 'package:first_projrct/Furniture/widget/furniture_product_description/build_furniture_product_description_dialog.dart';
+import 'package:first_projrct/Furniture/widget/furniture_product_description/build_furniture_product_description_materials.dart';
+import 'package:first_projrct/Furniture/widget/furniture_product_description/build_furniture_selected_photo.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class ProductDescriptionPage extends StatefulWidget {
+class FurnitureProductDescriptionPage extends StatefulWidget {
+  static String routeName = 'ProductDescriptionPageRouteName';
 
   @override
-  State<ProductDescriptionPage> createState() => _ProductDescriptionPageState();
+  State<FurnitureProductDescriptionPage> createState() => _FurnitureProductDescriptionPageState();
 }
 
-class _ProductDescriptionPageState extends State<ProductDescriptionPage> {
+class _FurnitureProductDescriptionPageState extends State<FurnitureProductDescriptionPage> {
 
   double? screenWidth;
   double? screenHeight;
@@ -23,6 +28,8 @@ class _ProductDescriptionPageState extends State<ProductDescriptionPage> {
     'assets/images/otto4.jpg'
   ];
 
+  List<IconData>icons=[Icons.time_to_leave,Icons.timer,Icons.monetization_on];
+  List<String>titles=['x30%','x60%','x10%'];
   void _previousImage() {
     setState(() {
       photoIndex = photoIndex > 0 ? photoIndex - 1 : 0;
@@ -72,33 +79,12 @@ class _ProductDescriptionPageState extends State<ProductDescriptionPage> {
                     ),
                     onTap: _previousImage,
                   ),
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(0.0,screenWidth!*0.01,screenWidth!*0.04,0.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        IconButton(
-                            icon: Icon(
-                                Icons.arrow_back,
-                              size: screenWidth!*0.08,
-                            ),
-                            color: Colors.black,
-                            onPressed: () {}),
-                        Material(
-                            elevation: 4.0,
-                            borderRadius: BorderRadius.circular(screenWidth!*0.1),
-                            child: Container(
-                                height: screenWidth!*0.11,
-                                width:screenWidth!*0.11,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(screenWidth!*0.1)),
-                                child: Icon(
-                                  Icons.favorite,
-                                  color: Colors.red,
-                                  size: screenWidth!*0.07,
-                                )))
-                      ],
-                    ),
+                  BuildFurnitureProductDescriptionAppBar(
+                    screenHeight:screenHeight!,
+                    screenWidth:screenWidth!,
+                    icon: Icons.arrow_back,
+                    favorite:Icons.favorite,
+                    favoriteBorder:Icons.favorite_border,
                   ),
                   Positioned(
                       top: screenHeight!*0.355,
@@ -156,66 +142,12 @@ class _ProductDescriptionPageState extends State<ProductDescriptionPage> {
                 ),
               ),
               SizedBox(height: screenHeight!*0.03),
-              Padding(
-                  padding: EdgeInsets.only(left: screenWidth!*0.04),
-                  child: Row(
-                    children: <Widget>[
-                      Container(
-                          height: screenWidth!*0.14,
-                          width: screenWidth!*0.14,
-                          child: Icon(
-                              Icons.time_to_leave,
-                              color: Colors.grey,
-                              size: screenWidth!*0.09,
-                          )
-                      ),
-                      Text('x30%',
-                        style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: screenWidth!*0.05,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      SizedBox(width: 10.0),
-                      Container(
-                        height: screenWidth!*0.14,
-                        width: screenWidth!*0.14,
-                        child: Icon(
-                          Icons.timer,
-                          color: Colors.grey,
-                          size: screenWidth!*0.09,
-                        ),
-                      ),
-                      Text('x60%',
-                        style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: screenWidth!*0.05,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                      SizedBox(width: 10.0),
-                      Container(
-                        height: screenWidth!*0.14,
-                        width: screenWidth!*0.14,
-                        child: Icon(
-                          Icons.monetization_on,
-                          color: Colors.grey,
-                          size: screenWidth!*0.09,
-                        ),
-                      ),
-                      Text('x10%',
-                        style: TextStyle(
-                            fontFamily: 'Montserrat',
-                            fontSize: screenWidth!*0.05,
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold
-                        ),
-                      ),
-                    ],
-                  )
-              )
+              BuildFurnitureProductDescriptionMaterials(
+                screenWidth:screenWidth!,
+                screenHeight:screenHeight!,
+                icons: icons,
+                titles: titles,
+              ),
             ],
           )
         ],
@@ -257,20 +189,31 @@ class _ProductDescriptionPageState extends State<ProductDescriptionPage> {
                         ),
                       ),
                     ),
-                    Container(
-                        color: const Color(0xFFFEDD59),
-                        width:screenWidth!*0.66,
-                        child: Center(
-                            child: Text(
-                              'Add to Cart',
-                              style: TextStyle(
-                                  fontFamily: 'Montserrat',
-                                  fontSize: screenWidth!*0.05,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold
-                              ),
-                            )
-                        )
+                    GestureDetector(
+                      onTap: (){
+                        BuildFurnitureProductDescriptionDialog(
+                            screenWidth:screenWidth!,
+                            screenHeight:screenHeight!,
+                            text:'Sure to add it to a cart?',
+                            context: context,
+                          color: 0xFFFDD148,
+                        );
+                      },
+                      child: Container(
+                          color: const Color(0xFFFEDD59),
+                          width:screenWidth!*0.66,
+                          child: Center(
+                              child: Text(
+                                'Add to Cart',
+                                style: TextStyle(
+                                    fontFamily: 'Montserrat',
+                                    fontSize: screenWidth!*0.05,
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold
+                                ),
+                              )
+                          )
+                      ),
                     )
                   ]
               )

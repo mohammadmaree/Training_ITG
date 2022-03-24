@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class BuildFurnitureListItem extends StatelessWidget {
+class BuildFurnitureStatsListItem extends StatelessWidget {
   final String title;
   final int buttonColor;
   final IconData icon;
   final double screenHeight;
   final double screenWidth;
-  BuildFurnitureListItem({
+  BuildFurnitureStatsListItem({
     required this.title,
     required this.buttonColor,
     required this.icon,

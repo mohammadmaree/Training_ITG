@@ -1,13 +1,15 @@
-import 'package:first_projrct/Furniture/pages/stats_page.dart';
+import 'package:first_projrct/Furniture/pages/furniture_stats_page.dart';
 import 'package:first_projrct/Furniture/widget/build_furniture_background.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_categories_home.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_item_card.dart';
-import 'package:first_projrct/Furniture/widget/build_furniture_search.dart';
+import 'package:first_projrct/Furniture/widget/furniture_home/build_furniture_categories_home.dart';
+import 'package:first_projrct/Furniture/widget/furniture_home/build_furniture_details_home.dart';
+import 'package:first_projrct/Furniture/widget/furniture_home/build_furniture_item_card.dart';
+import 'package:first_projrct/Furniture/widget/furniture_home/build_furniture_search.dart';
+import 'package:first_projrct/Furniture/widget/furniture_home/build_furniture_home_app_bar.dart';
 import 'package:flutter/material.dart';
 
 
-class FurnitureHome extends StatelessWidget {
-  static String routeName = 'FurnitureHomeRouteName';
+class FurnitureHomePage extends StatelessWidget {
+  static String routeName = 'FurnitureHomePageRouteName';
   @override
 
   double? screenWidth;
@@ -56,69 +58,18 @@ class FurnitureHome extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: screenHeight!*0.03),
-                    Row(
-                      children: [
-                        SizedBox(width: screenWidth!*0.04),
-                        GestureDetector(
-                          onTap: (){
-                            Navigator.of(context).pushNamed(StatsPage.routeName);
-                          },
-                          child: Container(
-                            alignment: Alignment.topLeft,
-                            height:screenWidth!*0.15,
-                            width: screenWidth!*0.15,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(screenWidth!*0.15,),
-                                border: Border.all(
-                                    color: Colors.white,
-                                    style: BorderStyle.solid,
-                                    width: 2.0),
-                                image: const DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: AssetImage(
-                                      'assets/images/engin.jpg',
-                                    ))),
-                          ),
-                        ),
-                        SizedBox(
-                          width:screenWidth!*0.65,
-                        ),
-                        Container(
-                          alignment: Alignment.topRight,
-                          child: IconButton(
-                            icon: Icon(
-                              Icons.menu,
-                              size:screenWidth!*0.1,
-                            ),
-                            onPressed: () {},
-                            color: Colors.white,
-                            iconSize:screenWidth!*0.1,
-                          ),
-                        ),
-                        SizedBox(height: screenHeight!*0.02),
-                      ],
+                    BuildFurnitureHomeAppBar(
+                      screenHeight:screenHeight!,
+                      screenWidth:screenWidth!,
+                      image:'assets/images/engin.jpg',
+                      icon: Icons.menu,
                     ),
                     SizedBox(height: screenHeight!*0.04),
-                    Padding(
-                      padding: EdgeInsets.only(left: screenHeight!*0.02),
-                      child: Text(
-                        'Hello , Pino',
-                        style: TextStyle(
-                            fontFamily: 'Quicksand',
-                            fontSize: screenWidth!*0.08,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                    SizedBox(height: screenHeight!*0.01),
-                    Padding(
-                      padding: EdgeInsets.only(left: screenHeight!*0.02),
-                      child: Text(
-                        'What do you want to buy?',
-                        style: TextStyle(
-                            fontFamily: 'Quicksand',
-                            fontSize: screenWidth!*0.07,
-                            fontWeight: FontWeight.bold),
-                      ),
+                    BuildFurnitureDetailsHome(
+                      screenWidth:screenWidth!,
+                      screenHeight:screenHeight!,
+                      title:'Hello , Pino',
+                      text:'What do you want to buy?',
                     ),
                     SizedBox(height: screenHeight!*0.06),
                     BuildFurnitureSearch(
@@ -149,7 +100,7 @@ class FurnitureHome extends StatelessWidget {
                 screenWidth:screenWidth!*0.95,
                 title: itemTitle[index],
                 image: itemImages[index],
-                isFavorite:isFavorites[index],
+               // isFavorite:isFavorites[index],
               ),
             ),
           ],
