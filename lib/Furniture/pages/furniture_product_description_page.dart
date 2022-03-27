@@ -57,6 +57,7 @@ class _FurnitureProductDescriptionPageState extends State<FurnitureProductDescri
               Stack(
                 children: [
                   Container(
+
                     height: screenHeight!*0.38,
                     decoration: BoxDecoration(
                         image: DecorationImage(
