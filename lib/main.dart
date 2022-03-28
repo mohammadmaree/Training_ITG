@@ -5,7 +5,9 @@ import 'package:first_projrct/Furniture/pages/furniture_shopping_cart_page.dart'
 import 'package:first_projrct/Furniture/pages/furniture_stats_page.dart';
 import 'package:first_projrct/cards/cards_page.dart';
 import 'package:first_projrct/carousel/pages/carousel_page.dart';
+import 'package:first_projrct/clean_designs/chef_profile/pages/chef_profile_page.dart';
 import 'package:first_projrct/clean_designs/fashion_designs/pages/fashion_designs_page.dart';
+import 'package:first_projrct/clean_designs/hairstylist/pages/hairstylist_page.dart';
 import 'package:first_projrct/clean_designs/minimal/minimal_page.dart';
 import 'package:first_projrct/dessert_restaurant/pages/dessert_restaurant_home.dart';
 import 'package:first_projrct/gcoaching/pages/home_page.dart';
@@ -49,6 +51,8 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return FashionDesignsPage();
+    return HairsrylistPage();
   }
 }
+
+

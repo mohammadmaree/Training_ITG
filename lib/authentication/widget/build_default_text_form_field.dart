@@ -21,7 +21,9 @@ class BuildDefaultTextFormField extends StatelessWidget {
           // hintText: 'EMAIL',
           // hintStyle: ,
           focusedBorder: const UnderlineInputBorder(
-              borderSide: BorderSide(color: Colors.green))),
+              borderSide: BorderSide(color: Colors.green)
+          )
+      ),
     );
   }
 }
