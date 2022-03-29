@@ -7,8 +7,10 @@ import 'package:first_projrct/cards/cards_page.dart';
 import 'package:first_projrct/carousel/pages/carousel_page.dart';
 import 'package:first_projrct/clean_designs/chef_profile/pages/chef_profile_page.dart';
 import 'package:first_projrct/clean_designs/fashion_designs/pages/fashion_designs_page.dart';
+import 'package:first_projrct/clean_designs/gourmet_takeaway/pages/gourmet_takeaway_page.dart';
 import 'package:first_projrct/clean_designs/hairstylist/pages/hairstylist_page.dart';
 import 'package:first_projrct/clean_designs/minimal/minimal_page.dart';
+import 'package:first_projrct/currency_account/currency_account_main.dart';
 import 'package:first_projrct/dessert_restaurant/pages/dessert_restaurant_home.dart';
 import 'package:first_projrct/gcoaching/pages/home_page.dart';
 import 'package:first_projrct/authentication/pages/login_page.dart';
@@ -51,7 +53,7 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return HairsrylistPage();
+    return CurrencyAccountMain();
   }
 }
 
