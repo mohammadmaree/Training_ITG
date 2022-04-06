@@ -61,8 +61,9 @@ class DashboardPage extends StatelessWidget {
                       onTap: () {
                           Navigator.of(context).pushReplacement(MaterialPageRoute(
                               builder: (context) => InputRedPage(
-                                  origCurrency: currencyone,
-                                  convCurrency: currencytwo)));
+                                origCurrency: currencytwo,
+                                convCurrency: currencyone,
+                              )));
                       },
                       child: Text(
                         currencyVal.toString(),
@@ -117,8 +118,9 @@ class DashboardPage extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).pushReplacement(MaterialPageRoute(
                           builder: (context) => InputWhitePage(
-                              origCurrency: currencyone,
-                              convCurrency: currencytwo,
+                            origCurrency: currencyone,
+                            convCurrency: currencytwo,
+
                           )
                       )
                       );

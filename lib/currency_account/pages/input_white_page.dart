@@ -36,6 +36,7 @@ class _InputWhitePageState extends State<InputWhitePage> {
     screenWidth = MediaQuery.of(context).size.width;
     screenHeight = MediaQuery.of(context).size.height
         - MediaQuery.of(context).padding.top;
+    print(widget.origCurrency);
     return Scaffold(
       body: Column(
         children: [

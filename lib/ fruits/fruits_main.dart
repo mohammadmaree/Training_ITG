@@ -1,13 +1,18 @@
+import 'package:first_projrct/%20fruits/pages/fruits_page.dart';
+import 'package:first_projrct/%20fruits/widget/build_fruits_app_bar.dart';
+import 'package:first_projrct/%20fruits/widget/build_fruits_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-class  FruitsPage extends StatefulWidget {
+class  FruitsMain extends StatefulWidget {
 
   @override
-  State<FruitsPage> createState() => _FruitsPageState();
+  State<FruitsMain> createState() => _FruitsMainState();
 }
 
-class _FruitsPageState extends State<FruitsPage>with SingleTickerProviderStateMixin {
-
+class _FruitsMainState extends State<FruitsMain>with SingleTickerProviderStateMixin {
+  double? screenWidth;
+  double? screenHeight;
   TabController? tabController;
+  String imageProfile='assets/images/picsix.jpeg';
 
   @override
   void initState() {
@@ -17,34 +22,17 @@ class _FruitsPageState extends State<FruitsPage>with SingleTickerProviderStateMi
   }
   @override
   Widget build(BuildContext context) {
+    screenWidth = MediaQuery.of(context).size.width;
+    screenHeight = MediaQuery.of(context).size.height
+        - MediaQuery.of(context).padding.top;
     return Scaffold(
       backgroundColor: Colors.white,
       body:ListView(
         children: [
-          Container(
-            padding: EdgeInsets.only(
-                top: 10.0, right: 15.0, bottom: 10.0, left: 15.0),
-            width: MediaQuery.of(context).size.width,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Container(
-                  height: 40.0,
-                  width: 40.0,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20.0),
-                      image: DecorationImage(
-                          image: AssetImage('assets/images/picsix.jpeg'),
-                          fit: BoxFit.cover)),
-                ),
-                IconButton(
-                  icon: Icon(Icons.menu),
-                  color: Colors.black,
-                  iconSize: 27.0,
-                  onPressed: () {},
-                )
-              ],
-            ),
+          BuildFruitsAppBar(
+            screenHeight:screenHeight!,
+            screenWidth:screenWidth!,
+            imageProfile:imageProfile,
           ),
           Padding(
             padding: EdgeInsets.only(top: 20.0),
@@ -59,7 +47,7 @@ class _FruitsPageState extends State<FruitsPage>with SingleTickerProviderStateMi
                   child: Text(
                     'Fruits',
                     style: TextStyle(
-                        fontSize: 33.0,
+                        fontSize:screenWidth!*0.09,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold
                     ),
@@ -69,7 +57,7 @@ class _FruitsPageState extends State<FruitsPage>with SingleTickerProviderStateMi
                   child: Text(
                     'Bread',
                     style: TextStyle(
-                        fontSize: 33.0,
+                        fontSize:screenWidth!*0.09,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold
                     ),
@@ -79,7 +67,7 @@ class _FruitsPageState extends State<FruitsPage>with SingleTickerProviderStateMi
                   child: Text(
                     'Drink',
                     style: TextStyle(
-                        fontSize: 33.0,
+                        fontSize:screenWidth!*0.09,
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.bold
                     ),
@@ -89,18 +77,23 @@ class _FruitsPageState extends State<FruitsPage>with SingleTickerProviderStateMi
             ),
           ),
           Container(
-            height: MediaQuery.of(context).size.height - 200.0,
+            height: screenHeight! - 200.0,
             child: TabBarView(
               controller: tabController,
               children: <Widget>[
-                // new FruitsPage(),
-                // new FruitsPage(),
-                // new FruitsPage()
+                FruitsPage(),
+                FruitsPage(),
+                FruitsPage(),
               ],
             ),
           )
         ],
       ),
+      bottomNavigationBar: BuildFruitsBottomNavigationBar(
+        screenWidth:screenWidth!,
+        screenHeight:screenHeight!,
+        title:'Filters',
+      )
     );
   }
 }

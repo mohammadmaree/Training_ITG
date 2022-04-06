@@ -1,3 +1,4 @@
+import 'package:first_projrct/car_service/pages/rental_service_page.dart';
 import 'package:first_projrct/car_service/widget/build_car_service_app_bar.dart';
 import 'package:first_projrct/car_service/widget/build_car_service_details.dart';
 import 'package:first_projrct/car_service/widget/build_car_service_exchange.dart';
@@ -5,6 +6,7 @@ import 'package:first_projrct/car_service/widget/build_car_service_info.dart';
 import 'package:flutter/material.dart';
 
 class CarServicePage extends StatefulWidget {
+  static String routeName = 'CarServicePageRouteName';
 
   @override
   State<CarServicePage> createState() => _CarServicePageState();
@@ -45,8 +47,13 @@ class _CarServicePageState extends State<CarServicePage>with SingleTickerProvide
                 screenHeight:screenWidth!,
                 screenWidth:screenHeight!,
               ),
-              Image.asset('assets/images/porsche.png', fit: BoxFit.cover,
-                  height: 175.0, width: screenWidth! - 30.0),
+              GestureDetector(
+                onTap: (){
+                  Navigator.of(context).pushNamed(RentalServicePage.routeName);
+                },
+                child: Image.asset('assets/images/porsche.png', fit: BoxFit.cover,
+                    height: 175.0, width: screenWidth! - 30.0),
+              ),
               BuildCarServiceDetails(
                 name:'PORSCHE',
                 type:'2019 - 911 CARRERA S',
@@ -95,7 +102,7 @@ class _CarServicePageState extends State<CarServicePage>with SingleTickerProvide
                   Icons.play_arrow,
                   color: Colors.grey,
                 size: screenWidth!*0.065,
-              )),
+              ),),
               Tab(icon: Icon(
                   Icons.navigation,
                   color: Colors.black,

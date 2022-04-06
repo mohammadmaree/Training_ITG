@@ -36,6 +36,7 @@ class _InputRedPageState extends State<InputRedPage> {
     screenWidth = MediaQuery.of(context).size.width;
     screenHeight = MediaQuery.of(context).size.height
         - MediaQuery.of(context).padding.top;
+    print(widget.origCurrency);
     return Scaffold(
       backgroundColor: Color(0xFFEC5759),
       body: Column(

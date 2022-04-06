@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class BuildPlanDetailsBackground extends StatelessWidget {
+class BuildPlantDetailsBackground extends StatelessWidget {
   final double screenWidth;
   final double screenHeight;
   final int color;
-  BuildPlanDetailsBackground({
+  BuildPlantDetailsBackground({
     required this.screenWidth,
     required this.screenHeight,
     required this.color,
