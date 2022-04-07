@@ -4,6 +4,7 @@ import 'package:first_projrct/Furniture/pages/furniture%20_home_page.dart';
 import 'package:first_projrct/Furniture/pages/furniture_product_description_page.dart';
 import 'package:first_projrct/Furniture/pages/furniture_shopping_cart_page.dart';
 import 'package:first_projrct/Furniture/pages/furniture_stats_page.dart';
+import 'package:first_projrct/animatedSwitcher/animatedSwitcher_page.dart';
 import 'package:first_projrct/cakes_and_pastries/cakes_and_pastries_page.dart';
 import 'package:first_projrct/car_service/pages/car_service_page.dart';
 import 'package:first_projrct/car_service/pages/rental_service_page.dart';
@@ -16,6 +17,7 @@ import 'package:first_projrct/clean_designs/hairstylist/pages/hairstylist_page.d
 import 'package:first_projrct/clean_designs/minimal/minimal_page.dart';
 import 'package:first_projrct/currency_account/currency_account_main.dart';
 import 'package:first_projrct/dessert_restaurant/pages/dessert_restaurant_home.dart';
+import 'package:first_projrct/food_and_beverages/food_and_beverages_page.dart';
 import 'package:first_projrct/food_reviews/food_reviews_page.dart';
 import 'package:first_projrct/gcoaching/pages/home_page.dart';
 import 'package:first_projrct/authentication/pages/login_page.dart';
@@ -35,6 +37,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MyApp());
+
 }
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -67,7 +70,7 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return NutritionAppPage();
+    return AnimatedSwitcherPage();
   }
 }
 

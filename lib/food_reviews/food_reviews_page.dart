@@ -21,6 +21,7 @@ class _FoodReviewsPageState extends State<FoodReviewsPage>with SingleTickerProvi
     tabController = TabController(vsync: this, length: 3);
   }
 
+
   @override
   Widget build(BuildContext context) {
     screenWidth = MediaQuery.of(context).size.width;

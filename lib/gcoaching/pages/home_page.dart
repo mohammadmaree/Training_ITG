@@ -163,6 +163,7 @@ class HomePage extends StatelessWidget {
             crossAxisSpacing: 2.0,
             mainAxisSpacing: 4.0,
             shrinkWrap: true,
+
             children: <Widget>[
               // ListView.builder(
               //   shrinkWrap: true,
