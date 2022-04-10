@@ -1,4 +1,5 @@
 import 'package:first_projrct/%20fruits/fruits_main.dart';
+import 'package:first_projrct/%20green_revolution/pages/green_revolution_page.dart';
 import 'package:first_projrct/Furniture/furniture_main.dart';
 import 'package:first_projrct/Furniture/pages/furniture%20_home_page.dart';
 import 'package:first_projrct/Furniture/pages/furniture_product_description_page.dart';
@@ -29,8 +30,10 @@ import 'package:first_projrct/plants/pages/plants_page.dart';
 import 'package:first_projrct/restaurant/pages/restaurant_home.dart';
 import 'package:first_projrct/authentication/pages/signup_page.dart';
 import 'package:first_projrct/restaurant_reviews/restaurant_reviews_page.dart';
+import 'package:first_projrct/scratch_wine_app/pages/scratch_wine_app_page.dart';
 import 'package:first_projrct/scroll%20_effects/scroll_effects_page.dart';
 import 'package:first_projrct/starbucks/starbucks_page.dart';
+import 'package:first_projrct/travel_app_speed_code/pages/travel_app_speed_code_page.dart';
 import 'package:first_projrct/travelogram/pages/travelogram_home.dart';
 import 'package:first_projrct/travelogram/pages/travelogram_profile_page.dart';
 import 'package:flutter/material.dart';
@@ -70,7 +73,7 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return AnimatedSwitcherPage();
+    return TravelAppSpeedCodePage();
   }
 }
 
