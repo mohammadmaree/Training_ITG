@@ -27,6 +27,7 @@ import 'package:first_projrct/minimal_designs_profile/minimal_designs_profile_pa
 import 'package:first_projrct/mobile_shopping/pages/mobile_shopping_page.dart';
 import 'package:first_projrct/nutrition_app/pages/nutrition_app_page.dart';
 import 'package:first_projrct/plants/pages/plants_page.dart';
+import 'package:first_projrct/project_abd/main_page.dart';
 import 'package:first_projrct/restaurant/pages/restaurant_home.dart';
 import 'package:first_projrct/authentication/pages/signup_page.dart';
 import 'package:first_projrct/restaurant_reviews/restaurant_reviews_page.dart';
@@ -73,7 +74,7 @@ class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key,}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return TravelAppSpeedCodePage();
+    return MainPage();
   }
 }
 

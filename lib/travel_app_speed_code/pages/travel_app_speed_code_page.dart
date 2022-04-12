@@ -1,4 +1,5 @@
 import 'package:first_projrct/travel_app_speed_code/widget/build_travel_app_app_bar.dart';
+import 'package:first_projrct/travel_app_speed_code/widget/build_travel_app_card.dart';
 import 'package:first_projrct/travel_app_speed_code/widget/build_travel_app_info.dart';
 import 'package:first_projrct/travel_app_speed_code/widget/build_travel_app_search.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +47,31 @@ class TravelAppSpeedCodePage extends StatelessWidget {
               ),
             ),
           ),
-          
+          Padding(
+            padding: const EdgeInsets.only(left: 15.0),
+            child: Container(
+              height: 300.0,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  BuildTravelAppCard(
+                      title: 'Pamir Mountains, China',
+                      rating: '4.1',
+                      imgPath: 'assets/images/mountain.jpg',
+                    screenWidth:screenWidth! ,
+                    screenHeight: screenHeight!,
+                  ),
+                  BuildTravelAppCard(
+                      title: 'Kathmandu city, Nepal',
+                      rating: '3.8',
+                      imgPath: 'assets/images/kathmandu.jpg',
+                    screenHeight:screenHeight! ,
+                    screenWidth: screenWidth!,
+                  )
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );

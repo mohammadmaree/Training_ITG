@@ -1,7 +1,6 @@
 import 'package:first_projrct/Furniture/widget/furniture_stats/build_furniture_stats_app_bar.dart';
 import 'package:first_projrct/Furniture/widget/build_furniture_background.dart';
 import 'package:first_projrct/Furniture/widget/furniture_stats/build_furniture_stats_card_details.dart';
-import 'package:first_projrct/Furniture/widget/furniture_home/build_furniture_categories_home.dart';
 import 'package:first_projrct/Furniture/widget/furniture_stats/build_furniture_categories_stats.dart';
 import 'package:first_projrct/Furniture/widget/furniture_stats/build_furniture_stats_list_item.dart';
 import 'package:flutter/material.dart';
